@@ -140,7 +140,8 @@ class PM5:
                 print('Wrong comunication with PM5')
                 return -np.inf
                 
-        print(data_string)
+        #print(data_string)
+        
         '''
         attempts = 0
         while identifier_byte != 68 and attempts < 3:
@@ -207,7 +208,7 @@ class PM5:
         
         #cal_byte = format(status_byte_1, '#010b')[2:][4:7] # cal heater byte -> it always look at the phisical position of the knob, no matter which cal heater is setted from software
         
-        self.print_settings()
+        #self.print_settings()
         
         count_value = LSB_byte + MSB_byte * 256
         reading = count_value * 2.0 * range_setting / 59576
